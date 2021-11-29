@@ -1,49 +1,59 @@
 package lesson6;
 
+
 import java.util.Scanner;
 
 public class CashFibonacci {
+    static int limit = 20;
     public static void main(String[] args) {
-        System.out.println("Введите номер элемента не более 20 ");
+
+        System.out.printf("Введите положительное число не более %d\n", limit);
         Scanner scanner = new Scanner(System.in);
-        while (true)
-        {
-            String s = scanner.nextLine();
-            if (s.equals("stop")) {
+
+        while (true) {
+            if (scanner.hasNextInt()) {
+                int n = scanner.nextInt();
+                if (n >= 0 && n <= limit) {
+                    System.out.println(n + "-й член последовательности Фибоначчи равен  " + numberFib(n));
+                } else {
+                    System.out.printf("Введено отрицательное число или число больше %d. Попробуйте снова\n", limit);
+                    continue;
+                }
+            } else if (scanner.hasNextLine() && scanner.nextLine().equals("stop")) {
+                System.out.println("Программа завершена");
                 break;
-            }else {
-                scanner.next();
-                System.out.println("Попробуйте еще раз ");
+            } else {
+                System.out.println("Ошибка при обработке ввода. Попробуйте снова");
+                continue;
             }
         }
-/*        while (!scanner.hasNextInt()) {
-                scanner.next();
-                System.out.println("Попробуйте еще раз ");
-           }
-        }
-*/
-        int n = scanner.nextInt();
 
-    if (n < 0){
-            System.out.println("Введено отрицательное число. Запустите программу заново");
-        }else
-            System.out.println(n + "-й член последовательности Фибоначчи равен  " + numberFib(n));
-/*
-            int[] arrayCash = new int[20];
-            int index = 0;
-            for (index = 0; index < arrayCash.length; index++) {
-                arrayCash[index] = numberFib(n);
-            }*/
     }
-    public static int numberFib(int n){
 
-        while (n < 20) {
-            if (n == 0) {
-                return 0;
-            } else if (n == 1) {
-                return 1;
+    public static int numberFib(int n) {
+
+        if (n == 0 || n == 1) {
+            return n;
+        } else {
+            return (numberFib(n - 1) + numberFib(n - 2));
+        }
+
+    }
+
+    public static int[] fibgen() {
+        int[] accumulator = new int[limit];
+        int s = 0;
+        int fib = numberFib(s);
+        while (fib < limit) {
+            accumulator[s] = fib;
+            if ((accumulator[0] == 0) || (accumulator[s] > 0)){
+                continue;
             }
+            s += 1;
+            fib = numberFib(s);
         }
-        return (numberFib(n - 1) + numberFib(n - 2));
+        return accumulator;
     }
+
 }
+
