@@ -39,7 +39,7 @@ public class CashFibonacci {
         }
 
     }
-
+/*
     public static int[] fibGen(int[] fibonacciAccum, int numberFib) {
         int[] fibonacciAccum = new int[limit];
         int s = 0;
@@ -55,6 +55,6 @@ public class CashFibonacci {
         }
         return fibonacciAccum;
     }
-
+*/
 }
 

@@ -9,24 +9,31 @@ public class ArraysCalc {
     public static void main(String[] args) {
         System.out.println("Укажите длину массива  ");
         Scanner console = new Scanner(System.in);
-
+        int control = 0;
         while (!console.hasNextInt()) {
-            console.next();
             System.out.println("Попробуйте еще раз ");
+            console.next();
         }
         int num = console.nextInt();
-        System.out.println("Создан массив из " + num + " чисел");
-        int [] numeric = new int[num];
+        if (num <= control) {
+            System.out.println("Введено отрицательное число или ноль, что недопустимо. Повторите ввод\n");
+            console.next();
+        } else {
+            System.out.println("Создан массив из " + num + " чисел");
 
-        for (int i = 0; i < numeric.length; i++){
-        numeric[i] = (int)(Math.random() * 30);
+            int[] numeric = new int[num];
 
+            for (int i = 0; i < numeric.length; i++) {
+                numeric[i] = (int) (Math.random() * 30);
+
+            }
+            System.out.println(Arrays.toString(numeric));
+            System.out.println("Минимальное значение в массиве равно " + minimum(numeric));
+            System.out.println("Максимальное значение в массиве равно " + maximum(numeric));
+            System.out.println("Среднее арифметическое всех значений в массиве равно " + average(numeric));
         }
-        System.out.println(Arrays.toString(numeric));
-        System.out.println("Минимальное значение в массиве равно " + minimum(numeric));
-        System.out.println("Максимальное значение в массиве равно " + maximum(numeric));
-        System.out.println("Среднее арифметическое всех значений в массиве равно " + average(numeric));
     }
+
     public static int minimum(int [] numeric){
         int minValue = numeric[0];
         for (int i = 1; i < numeric.length; i++){
