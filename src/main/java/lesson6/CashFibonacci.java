@@ -16,7 +16,7 @@ public class CashFibonacci {
         while (true) {
             if (scanner.hasNextInt()) {
                 int n = scanner.nextInt();
-                if (n >= 0 && n <= topLimit) {
+                if (n >= 0 && n < topLimit) {
                     if (fibonacciAccum[n] != 0) { //тут сначала смотрим в нашем кэше отличное от нуля значение, вдруг мы его посчитали и сохранили ранее
                         System.out.println(n + "-й член последовательности Фибоначчи был рассчитан ранее и помещён в кэш.\n" +
                                 "Он равен  "  + fibonacciAccum[n]); //Тут сразу достаем это значение из кэша и выводим на консоль, ничего не считая
