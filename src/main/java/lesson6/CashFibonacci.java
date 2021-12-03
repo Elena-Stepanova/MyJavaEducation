@@ -55,3 +55,24 @@ public class CashFibonacci {
     }
 }
 
+/*
+По поводу того, что после ввода числа, когда вводится строка вылезает два раза сообщение "Ошибка при обработке ввода. Попробуйте снова",
+проблема в том, что когда вызывается у объекта scanner любой из методов next (nextInt, nextLine и др.), то в этот момент
+управление программы передается консоли и ожидается ввод.
+Так как у вас вызывается в одном из условии такой метод:
+scanner.nextLine().equalsIgnoreCase("stop")
+
+while (true) {
+    String input = scanner.next();
+    if (isNumber(input)) {
+        int n = Integer.parseInt(input);
+        if (n >= 0 && n < topLimit) {
+           ... //дальше идет код без изменений
+    } else if (input.equalsIgnoreCase("stop")) { //тут проверяется введенная строка из консоли, которую записали в переменную в самом начале цикла
+        System.out.println("Программа завершена");
+        break;
+    } else {
+        System.out.println("Ошибка при обработке ввода. Попробуйте снова");
+        continue;
+    }
+ */
