@@ -12,6 +12,11 @@ public class Cat {
         Boolean isTrainings; //наличие дрессировки
     }
     public MyCat(){
-
+        String name;
+        String breed; //порода
+        int running; //бег (расстояние)
+        int swimming; //плавание (расстояние)
     }
+
+
 }

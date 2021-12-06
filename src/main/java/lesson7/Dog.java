@@ -29,5 +29,28 @@ public class Dog {
         this.height = height;
     }
 
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getRunning() {
+        return running;
+    }
+
+    public void setRunning(int running) {
+        this.running = running;
+    }
+
+    public int getSwimming() {
+        return swimming;
+    }
+
+    public void setSwimming(int swimming) {
+        this.swimming = swimming;
+    }
+}
 }
