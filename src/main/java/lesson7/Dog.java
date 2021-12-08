@@ -1,7 +1,8 @@
 package lesson7;
 
 public class Dog {
-    String name;
+
+    private String name;
     String breed; //порода
     int running; //бег (расстояние)
     int swimming; //плавание (расстояние)
@@ -22,7 +23,7 @@ public class Dog {
         this.isTrainings = isTrainings;
     }
 
-    public Dog() {
+    public Dog(String name) {
         this.name = name;
         this.running = running;
         this.swimming = swimming;
@@ -53,4 +54,4 @@ public class Dog {
         this.swimming = swimming;
     }
 }
-}
+
