@@ -20,7 +20,7 @@ public class animalRunner {
         Chicken kiki = new Chicken("Кики", 30, -1, 5);
 
         Penguin lolo = new Penguin("Лоло", -1, 10000, -1);
-
+// разобраться с тем, что ниже:
     //    Array[] animals = new Array[] {dogLord, dogTerry, catKitty, tigerSunny, suslikGuf, kiki, lolo};
     //    for (Array animal: animals){
     //        if (animal.running > 0)
