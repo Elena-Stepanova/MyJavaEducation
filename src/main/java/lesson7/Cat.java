@@ -39,5 +39,33 @@ public class Cat {
         this.isTrainings = isTrainings;
     }
 
+    public Cat(String name, int running, int swimming) {
+        this.name = name;
+        this.running = running;
+        this.swimming = swimming;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getRunning() {
+        return running;
+    }
+
+    public void setRunning(int running) {
+        this.running = running;
+    }
+
+    public int getSwimming() {
+        return swimming;
+    }
+
+    public void setSwimming(int swimming) {
+        this.swimming = swimming;
+    }
 }

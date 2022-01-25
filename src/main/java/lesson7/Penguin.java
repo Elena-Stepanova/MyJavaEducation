@@ -1,34 +1,21 @@
 package lesson7;
 
-public class Dog {
-
+public class Penguin {
     private String name;
     String breed; //порода
     int running; //бег (расстояние)
     int swimming; //плавание (расстояние)
+    int flying; //дальность полета
     double height; //рост
     String color; //окрас
     double age; //возраст
     Boolean isTrainings; //наличие дрессировки
 
-    public Dog(String name, String breed, int running, int swimming,
-               double height) {
+    public Penguin(String name, int running, int swimming, int flying) {
         this.name = name;
-        this.breed = breed;//порода
-        this.running = running;//бег (расстояние)
-        this.swimming = swimming;//плавание (расстояние)
-        this.height = height;//рост
-        this.color = color;//возраст
-        this.age = age;//наличие дрессировки
-        this.isTrainings = isTrainings;
-    }
-
-    public Dog(String name) {
-        this.name = name;
-        this.breed = breed;
         this.running = running;
         this.swimming = swimming;
-        this.height = height;
+        this.flying = flying;
     }
 
     public String getName() {
@@ -55,12 +42,11 @@ public class Dog {
         this.swimming = swimming;
     }
 
-    public double getHeight() {
-        return height;
+    public int getFlying() {
+        return flying;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setFlying(int flying) {
+        this.flying = flying;
     }
 }
-
