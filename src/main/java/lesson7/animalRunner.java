@@ -1,39 +1,31 @@
 package lesson7;
 
-import java.lang.reflect.Array;
-
-public class animalRunner {
+public class AnimalRunner {
 
     public static void main(String[] args) {
+        Dog bobik = new Dog("Бобик", 300, 130);
+        bobik.run(200);
+        bobik.run(400);
+        bobik.swim(100);
+        bobik.swim(150);
+        bobik.bark(3);
 
-        Dog dogTerry = new Dog("Терри", "терьер", 800, 30, 35.0);
-        System.out.println(dogTerry.getName());
+        Cat murzik = new Cat("Мурзик", 200, 0);
+        murzik.run(200);
+        murzik.run(400);
+        murzik.swim(100);
+        murzik.swim(150);
+        murzik.mew(3);
+        murzik.hiss();
+        murzik.purr();
 
-        Dog dogLord = new Dog ("Лорд", "дог", 5000, 500, 90.0);
+        BigCat tiger = new BigCat("Тайгер", 500, 200);
+        tiger.roar();
 
-        Cat catKitty = new Cat("Китти", 1000, -1);
-
-        Tiger tigerSunny = new Tiger("Санни", 30000, 2000);
-
-        Gopher suslikGuf = new Gopher("Гуф", 50, -1);
-
-        Chicken kiki = new Chicken("Кики", 30, -1, 5);
-
-        Penguin lolo = new Penguin("Лоло", -1, 10000, -1);
-// разобраться с тем, что ниже:
-    //    Array[] animals = new Array[] {dogLord, dogTerry, catKitty, tigerSunny, suslikGuf, kiki, lolo};
-    //    for (Array animal: animals){
-    //        if (animal.running > 0)
-    //    }
-
+        Animal[] animals = new Animal[] {bobik, murzik, tiger};
+        for (Animal animal: animals) {
+            System.out.printf("%s\n", animal.getName());
+        }
 
     }
-
-    public void run(int animalRunner){
-
-           System.out.println("");
-
-//           return animalRunner;
-    }
-
 }
