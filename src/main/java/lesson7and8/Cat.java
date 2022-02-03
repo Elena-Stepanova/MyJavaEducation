@@ -1,8 +1,8 @@
-package lesson7;
+package lesson7and8;
 
 public class Cat extends Animal {
-    public Cat(String name, int running, int swimming) {
-        super(name, running, swimming);
+    public Cat(String name, int running, int swimming, String sound) {
+        super(name, running, swimming, sound);
     }
 
     public void mew(int times){

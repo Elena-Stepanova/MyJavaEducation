@@ -1,8 +1,8 @@
-package lesson7;
+package lesson7and8;
 
 public class Dog extends Animal {
-    public Dog (String name, int running, int swimming) {
-        super(name, running, swimming);
+    public Dog (String name, int running, int swimming, String sound) {
+        super(name, running, swimming, sound);
     }
 
     public void bark(int times){

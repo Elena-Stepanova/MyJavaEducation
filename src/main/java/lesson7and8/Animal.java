@@ -1,14 +1,16 @@
-package lesson7;
+package lesson7and8;
 
 public class Animal {
     private String name;
     private int running;
     private int swimming;
+    private String sound;
 
-    public Animal (String name, int running, int swimming){
+    public Animal(String name, int running, int swimming, String sound){
         this.name = name;
         this.running = running;
         this.swimming = swimming;
+        this.sound = sound;
     }
 
     public String getName() {
@@ -29,6 +31,10 @@ public class Animal {
 
     public void setSwimming(int swimming) {
         this.swimming = swimming;
+    }
+
+    public String getSound() {
+        return sound;
     }
 
     public void swim(int distance){
@@ -53,5 +59,9 @@ public class Animal {
         } else {
             System.out.printf("%s не может бегать\n", this.name);
         }
+    }
+
+    public void voice(){
+        System.out.printf("%s говорит: %s\n", this.name, this.getSound());
     }
 }
